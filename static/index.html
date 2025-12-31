@@ -22,21 +22,21 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Autonomy. Sensing. Action.</p>
-          <h1 class="hero-title">Interactive field-ready robotics for water and beyond.</h1>
-          <p class="hero-subtitle">
+          <div class="eyebrow text-body">Autonomy. Sensing. Action.</div>
+          <div class="hero-title text-title-lg">Interactive field-ready robotics for water and beyond.</div>
+          <div class="hero-subtitle text-body">
             This page is built around a central interactive illustration. Start with the blueprint,
             then attach hotspots for systems, sensors, and workflows.
-          </p>
+          </div>
 
           <div class="hero-actions">
             <a class="btn primary" href="#platform">Explore platform</a>
             <a class="btn ghost" href="#tech">See tech stack</a>
           </div>
 
-          <p class="micro">
+          <div class="micro text-body-muted">
             Tip: SVG is loaded inline, so later you can bind hover/click to SVG element IDs.
-          </p>
+          </div>
         </div>
 
         <!-- Inline SVG BOAT IMAGE -->
@@ -674,44 +674,34 @@
     <!-- Products -->
     <section class="section" id="products">
       <div class="container">
-        <h2>Products</h2>
+        <div class="text-title-md">Products</div>
         <div class="grid-3">
-          <div class="card">
-            <h3>CANaBUS Maximus</h3>
-            <img src="images/canabus-maximus.png" alt="CANaBUS Maximus" style="width:100%; border-radius:12px; margin-bottom:12px;">
-            <p>
-              Use this section for a short, scannable overview: what it does, where it works,
-              and what makes it different.
-            </p>
+          
+          <div class="card" id="canabus-maximus-card">
+            <img class="product-image" src="images/canabus-maximus.png" alt="CANaBUS Maximus">
+            <div class="text-title-sm">CANaBUS Maximus</div>
+            <div class="text-body">
+              An all-in-one marine autonomy computer that combines compute, autopilot, positioning, and system integration into a rugged platform for unmanned surface vessels. It replaces multi-device setups with a unified architecture that simplifies installation and improves reliability. Designed for professional USV operations, the platform supports autonomy workflows from research to commercial deployment while remaining flexible for custom software, sensors, and vessel configurations.
+            </div>
+            <a class="svg-modal-link" href="canabus-maximus.html">Read full details</a>
           </div>
 
-          <div id="canabus-mini-card-placeholder">
-            <div class="card" id="canabus-mini-card">
-              <h3>CANaBUS Mini</h3>
-              <img src="images/canabus-mini.png" alt="CANaBUS Mini" style="width:100%; border-radius:12px; margin-bottom:12px;">
-              <h4>Core Operating Modes</h4>
-              <p><strong>Mode 1: Standalone CAN Transceiver &amp; Protocol Translator</strong> Functions as an intelligent gateway, converting proprietary protocols into NMEA 2000 or JSON via Ethernet/Serial using proprietary .dbc files.</p>
-              <p><strong>· Use Cases:</strong> Professional commercial USV operations, remote shore-based piloting, and fleet management (coming soon).</p>
-              <p><strong>· Key Features:</strong> Zero-install web interface, real-time telemetry with custom widgets, &lt;100ms command latency, mission replay, and modular sensor fusion. Includes advanced payload release capabilities extending beyond the standard ArduPilot scope.</p>
-              <br><br>
-              <h4>Key Highlights</h4>
-              <p><strong>Multi-Protocol Marine Integration:</strong> Interfaces with proprietary CAN protocols from major manufacturers like Volvo Penta, Yamaha, Mercury, Garmin, and Raymarine to eliminate vendor lock-in.</p>
-              <p><strong>Remote Web Interface:</strong> Native compatibility with the Fathom Robotics USV Companion Interface for real-time telemetry, diagnostics, and piloting from any browser.</p>
+          <div class="card" id="canabus-mini-card">
+            <img class="product-image" src="images/canabus-mini.png" alt="CANaBUS Mini">
+            <div class="text-title-sm">CANaBUS Mini</div>
+            <div class="text-body"> 
+              A versatile marine CAN interface that bridges legacy and modern systems, supporting multiple operating modes from protocol translation to full autonomy and autopilot integration. It enables real-time data exchange between vessel systems while remaining control-system agnostic, and is designed for reliable operation in harsh marine environments. The platform eliminates vendor lock-in and provides browser-based telemetry, diagnostics, and piloting through a zero-install web interface.
             </div>
+            <a class="svg-modal-link" href="canabus-mini.html">Read full details</a>
           </div>
           
           <div class="card" id="e-stop-card">
-            <h3>E-STOP Receiver</h3>
-             <img src="images/e-stop.png" alt="E-stop" style="width:100%; border-radius:12px; margin-bottom:12px;">
-            <h4>Core Operating Modes</h4>
-            <p><strong>Mode 1: Standalone CAN Transceiver &amp; Protocol Translator</strong> Functions as an intelligent gateway, converting proprietary protocols into NMEA 2000 or JSON via Ethernet/Serial using proprietary .dbc files.</p>
-            <p><strong>· Use Cases:</strong> Professional commercial USV operations, remote shore-based piloting, and fleet management (coming soon).</p>
-            <p><strong>· Key Features:</strong> Zero-install web interface, real-time telemetry with custom widgets, &lt;100ms command latency, mission replay, and modular sensor fusion. Includes advanced payload release capabilities extending beyond the standard ArduPilot scope.</p>
-            <br><br>
-            <h4>Key Highlights</h4>
-            <p><strong>Multi-Protocol Marine Integration:</strong> Interfaces with proprietary CAN protocols from major manufacturers like Volvo Penta, Yamaha, Mercury, Garmin, and Raymarine to eliminate vendor lock-in.</p>
-            <p><strong>Remote Web Interface:</strong> Native compatibility with the Fathom Robotics USV Companion Interface for real-time telemetry, diagnostics, and piloting from any browser.</p>
-          
+            <img class="product-image" src="images/e-stop.png" alt="E-stop">
+            <div class="text-title-sm">E-STOP Receiver</div>
+            <div class="text-body">
+              A fail-safe wireless emergency stop system designed for robotics, autonomous platforms, and industrial machinery where hardwired safety controls are impractical. It allows operators to maintain immediate safety control from a distance, automatically halting equipment during emergencies, signal loss, or system faults. Built for demanding industrial environments, the system adds a robust safety layer with continuous monitoring, clear operator feedback, and flexible integration into mobile and stationary machinery workflows.
+            </div>
+            <a class="svg-modal-link" href="e-stop.html">Read full details</a>
           </div>
         </div>
       </div>
@@ -721,14 +711,14 @@
     <section class="section" id="platform">
       <div class="container two-col">
         <div>
-          <h2>Platform</h2>
-          <p>
+          <div class="text-title-md">Platform</div>
+          <div class="text-body">
             Use this section for a short, scannable overview: what it does, where it works,
             and what makes it different.
-          </p>
+          </div>
         </div>
         <div class="card">
-          <h3>Key capabilities</h3>
+          <div class="text-title-sm">Key capabilities</div>
           <ul class="list">
             <li>Distributed sensing + real-time monitoring</li>
             <li>Autonomous workflows and operator overrides</li>
@@ -741,19 +731,19 @@
     <!-- Mission -->
     <section class="section" id="mission">
       <div class="container">
-        <h2>Mission</h2>
+        <div class="text-title-md">Mission</div>
         <div class="grid-3">
           <div class="card">
-            <h3>Safety</h3>
-            <p>Design for predictable behavior and clear operator control.</p>
+            <div class="text-title-sm">Safety</div>
+            <div class="text-body">Design for predictable behavior and clear operator control.</div>
           </div>
           <div class="card">
-            <h3>Data</h3>
-            <p>Reliable data collection where it’s hard (or boring) for humans.</p>
+            <div class="text-title-sm">Data</div>
+            <div class="text-body">Reliable data collection where it’s hard (or boring) for humans.</div>
           </div>
           <div class="card">
-            <h3>Impact</h3>
-            <p>Conservation, inspection, monitoring, and operational intelligence.</p>
+            <div class="text-title-sm">Impact</div>
+            <div class="text-body">Conservation, inspection, monitoring, and operational intelligence.</div>
           </div>
         </div>
       </div>
@@ -763,20 +753,20 @@
     <section class="section" id="tech">
       <div class="container two-col">
         <div class="card">
-          <h3>Interactive illustration hooks</h3>
-          <p class="muted">
+          <div class="text-title-sm">Interactive illustration hooks</div>
+          <div class="text-body text-body-muted">
             Map SVG element IDs to human labels + descriptions in <code>js/main.js</code>.
-          </p>
+          </div>
           <pre class="code"><code>const HOTSPOTS = {
   // "svgElementId": { title: "Thruster", text: "Description..." }
 };</code></pre>
         </div>
 
         <div>
-          <h2>Tech</h2>
-          <p>
+          <div class="text-title-md">Tech</div>
+          <div class="text-body">
             Put the “how it works” here: sensors, autonomy, comms, workflows, and what’s interactive on the hero.
-          </p>
+          </div>
         </div>
       </div>
     </section>
