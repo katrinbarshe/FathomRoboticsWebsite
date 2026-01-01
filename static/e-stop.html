@@ -30,6 +30,7 @@
     </section>
   </main>
 
+  <div id="product-picking"></div>
   <div id="site-footer"></div>
 
   <script src="js/includes.js"></script>
@@ -37,6 +38,7 @@
     (async () => {
       await loadFragment("header.html", "site-header");
       await loadFragment("footer.html", "site-footer");
+      await loadFragment("product-picking.html", "product-picking");
       initHeaderNav();
       setYear();
     })();

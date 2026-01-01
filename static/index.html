@@ -760,7 +760,7 @@
       </div>
     </section>
     
-    <!-- Products -->
+    <!-- Products
     <section class="section" id="products">
       <div class="container">
         <div class="text-title-md">Products</div>
@@ -794,7 +794,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>  -->
 
     <!-- Platform 
     <section class="section" id="platform">
@@ -862,7 +862,7 @@
 
   </main>
 
-
+  <div id="product-picking"></div>
   <div id="site-footer"></div>
 
   <!-- SVG modals -->
@@ -915,6 +915,7 @@
     (async () => {
       await loadFragment("header.html", "site-header");
       await loadFragment("footer.html", "site-footer");
+      await loadFragment("product-picking.html", "product-picking");
       await loadScript("js/main.js");
     })();
   </script>
