@@ -264,7 +264,7 @@ svg .boat-body {
 svg .boat-part:hover {
   filter:
     drop-shadow(0 0 4px rgba(255,255,255,1))
-    drop-shadow(0 0 12px rgba(255,255,255,0.8));
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 /* stroke transitions smoothly (optional, but helps perceived smoothness) */
@@ -309,7 +309,7 @@ svg .boat-text-part:hover .boat-main-text,
 svg .boat-text-part.is-hovered .boat-main-text {
   filter:
     drop-shadow(0 0 4px rgba(255,255,255,1))
-    drop-shadow(0 0 12px rgba(255,255,255,0.8));
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 .boat-text {
@@ -320,15 +320,15 @@ svg .boat-text-part.is-hovered .boat-main-text {
 
 
 svg .boat-text-part:hover .boat-part {
+  opacity: 1;
   filter:
-    drop-shadow(0 0 2px #fff)
-    drop-shadow(0 0 6px rgba(255,255,255,0.95))
-    drop-shadow(0 0 14px rgba(255,255,255,0.85))
-    drop-shadow(0 0 26px rgba(255,255,255,0.7));
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 svg .boat-text-part:hover .boat-part path:not(.hit-area) {
-  stroke: #fff;
+  stroke: #ffffff;
+  stroke-opacity: 1;
 }
 
 /* Clickable SVG targets for modals */
