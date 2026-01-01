@@ -316,8 +316,20 @@ svg .boat-text-part.is-hovered .boat-main-text {
   transition: box-shadow 160ms ease;
 }
 
+/* Product label text styling */
+.product-label-text {
+  user-select: none;
+  pointer-events: none;
+}
 
-
+/* Underline text on hover to indicate clickability */
+svg .boat-text:hover .product-label-text,
+svg .boat-main-text:hover .product-label-text,
+svg .boat-text-part:hover .product-label-text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
 
 svg .boat-text-part:hover .boat-part {
   opacity: 1;
