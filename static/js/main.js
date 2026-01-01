@@ -228,13 +228,14 @@ document.addEventListener("pointermove", (e) => {
   if (tooltip && !tooltip.hidden) moveTooltipWithPointer(e);
 });
 
-window.addEventListener("resize", () => {
-  // Comment: On resize, re-render only if breakpoint SVG changes.
-  render();
-});
+// Disabled: Using inline SVG from HTML instead of responsive SVG loading
+// window.addEventListener("resize", () => {
+//   // Comment: On resize, re-render only if breakpoint SVG changes.
+//   render();
+// });
 
 setupNav();
 setupPanel();
-render();
+// render(); // Disabled: Using inline SVG from HTML instead of loading from assets/svg/
 
 

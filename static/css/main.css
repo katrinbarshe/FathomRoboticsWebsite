@@ -394,7 +394,10 @@ svg #antenna-2-text-part {
   position: relative;
   width: 100%;
   min-height: 70vh;
-  background: var(--hero-bg) center/cover no-repeat fixed;
+  background: var(--hero-bg, transparent) center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: var(--space-4) var(--space-3);
