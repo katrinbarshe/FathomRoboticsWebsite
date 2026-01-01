@@ -84,18 +84,22 @@ function bindSvgInteractions(svg) {
     el.style.cursor = "pointer";
 
     el.addEventListener("mouseenter", () => {
+      if (!tooltip) return;
       tooltip.textContent = HOTSPOTS[id].title;
       tooltip.hidden = false;
     });
 
     el.addEventListener("mouseleave", () => {
+      if (!tooltip) return;
       tooltip.hidden = true;
     });
 
     el.addEventListener("click", (e) => {
       e.stopPropagation();
-      panelTitle.textContent = HOTSPOTS[id].title;
-      panelBody.textContent = HOTSPOTS[id].text;
+      if (panelTitle && panelBody) {
+        panelTitle.textContent = HOTSPOTS[id].title;
+        panelBody.textContent = HOTSPOTS[id].text;
+      }
     });
   });
 
@@ -104,7 +108,7 @@ function bindSvgInteractions(svg) {
 
   svg.addEventListener("click", () => {
     // Comment: Click empty space to hide tooltip.
-    tooltip.hidden = true;
+    if (tooltip) tooltip.hidden = true;
   });
 }
 
@@ -199,6 +203,7 @@ function setupNav() {
 }
 
 function setupPanel() {
+  if (!panelClose || !panelTitle || !panelBody) return;
   panelClose.addEventListener("click", () => {
     panelTitle.textContent = "System";
     panelBody.textContent = "Click a highlighted part to see details here.";
@@ -220,15 +225,13 @@ async function render() {
 }
 
 document.addEventListener("pointermove", (e) => {
-  if (!tooltip.hidden) moveTooltipWithPointer(e);
+  if (tooltip && !tooltip.hidden) moveTooltipWithPointer(e);
 });
 
 window.addEventListener("resize", () => {
   // Comment: On resize, re-render only if breakpoint SVG changes.
   render();
 });
-
-document.getElementById("year").textContent = String(new Date().getFullYear());
 
 setupNav();
 setupPanel();
