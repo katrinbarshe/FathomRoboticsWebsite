@@ -6,6 +6,7 @@
   --muted: rgba(255,255,255,.65);
   --line: rgba(255,255,255,.10);
   --accent: #316883;
+  --accent-rgb: 49, 104, 131;
   --container: 1100px;
 
   /* Comment: Fluid type scale */
@@ -53,6 +54,15 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   width: 100%;
   margin: 0;
   padding: 0 var(--space-3);
+}
+
+/* Reserve space for async-loaded header/footer to prevent CLS */
+#site-header {
+  min-height: 72px;
+}
+
+#site-footer {
+  min-height: 60px;
 }
 
 .site-header{
@@ -236,30 +246,25 @@ svg {
 
 /* base state */
 svg .boat-part {
-  transition: opacity 160ms ease; 
+  will-change: filter, opacity;
+  transition: opacity 160ms ease;
   filter:
-    drop-shadow(0 0 2px var(--accent))
-    drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 95%, transparent))
-    drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 85%, transparent))
-    drop-shadow(0 0 26px color-mix(in srgb, var(--accent) 70%, transparent));
+    drop-shadow(0 0 4px rgba(var(--accent-rgb), 1))
+    drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.7));
 }
 
 svg .boat-body {
   filter:
-    drop-shadow(0 0 2px var(--accent))
-    drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 95%, transparent))
-    drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 85%, transparent))
-    drop-shadow(0 0 26px color-mix(in srgb, var(--accent) 70%, transparent));
+    drop-shadow(0 0 4px rgba(var(--accent-rgb), 1))
+    drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.7));
 }
 
 
 /* bright white glow on hover */
 svg .boat-part:hover {
   filter:
-    drop-shadow(0 0 2px rgba(255,255,255,1))
-    drop-shadow(0 0 6px rgba(255,255,255,0.95))
-    drop-shadow(0 0 14px rgba(255,255,255,0.85))
-    drop-shadow(0 0 26px rgba(255,255,255,0.7));
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 /* stroke transitions smoothly (optional, but helps perceived smoothness) */
@@ -280,44 +285,61 @@ svg .boat-part .hit-area {
 }
 
 
+svg .boat-text {
+  will-change: filter;
+}
+
 svg .boat-text:hover,
 svg .boat-text-part:hover .boat-text,
 svg .boat-text-part.is-hovered .boat-text {
-  stroke-opacity: 1;
-  stroke: #ffffff;
-
   filter:
-    drop-shadow(0 0 6px rgba(255,255,255,0.95))
-    drop-shadow(0 0 14px rgba(255,255,255,0.85));
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
+}
+
+svg .boat-main-text {
+  will-change: filter;
 }
 
 svg .boat-main-text:hover,
 svg .boat-text-part:hover .boat-main-text,
 svg .boat-text-part.is-hovered .boat-main-text {
   filter:
-    drop-shadow(0 0 2px rgba(255,255,255,1))
-    drop-shadow(0 0 6px rgba(255,255,255,0.95))
-    drop-shadow(0 0 14px rgba(255,255,255,0.85))
-    drop-shadow(0 0 26px rgba(255,255,255,0.7));
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 .boat-text {
   transition: box-shadow 160ms ease;
 }
 
+/* Product label text and icon styling */
+.product-label-text,
+.product-icon {
+  user-select: none;
+  pointer-events: none;
+}
 
-
+/* Underline text on hover to indicate clickability - ONLY for product links */
+svg #canabas-maximus:hover .product-label-text,
+svg #canabas-mini-1:hover .product-label-text,
+svg #canabas-mini-2:hover .product-label-text,
+svg #e-stop-receiver:hover .product-label-text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
 
 svg .boat-text-part:hover .boat-part {
+  opacity: 1;
   filter:
-    drop-shadow(0 0 2px #fff)
-    drop-shadow(0 0 6px rgba(255,255,255,0.95))
-    drop-shadow(0 0 14px rgba(255,255,255,0.85))
-    drop-shadow(0 0 26px rgba(255,255,255,0.7));
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 svg .boat-text-part:hover .boat-part path:not(.hit-area) {
-  stroke: #fff;
+  stroke: #ffffff;
+  stroke-opacity: 1;
 }
 
 /* Clickable SVG targets for modals */
@@ -394,7 +416,10 @@ svg #antenna-2-text-part {
   position: relative;
   width: 100%;
   min-height: 70vh;
-  background: var(--hero-bg) center/cover no-repeat fixed;
+  background: var(--hero-bg, transparent) center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: var(--space-4) var(--space-3);
@@ -409,8 +434,10 @@ svg #antenna-2-text-part {
 
 .tooltip{
   position: absolute;
-  left: 12px;
-  top: 12px;
+  left: 0;
+  top: 0;
+  transform: translate(12px, 12px);
+  will-change: transform;
   max-width: 260px;
   padding: 10px 12px;
   border-radius: 12px;

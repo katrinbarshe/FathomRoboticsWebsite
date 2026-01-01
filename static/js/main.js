@@ -39,6 +39,21 @@ const panelTitle = document.getElementById("panelTitle");
 const panelBody = document.getElementById("panelBody");
 const panelClose = document.getElementById("panelClose");
 
+// Performance: Cache bounding rect to avoid repeated DOM queries
+let cachedContainerRect = null;
+
+// Performance: Throttle function to limit execution rate
+function throttle(func, limit) {
+  let inThrottle;
+  return function(...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+
 // Bind modals to any inline SVG already present before async loading kicks in.
 const initialInlineSvg = svgStage.querySelector("svg");
 if (initialInlineSvg) {
@@ -178,11 +193,16 @@ function setupSvgModals(svg) {
 
 function moveTooltipWithPointer(e) {
   // Comment: Keep tooltip near pointer, but inside the visual container.
-  const container = svgStage.getBoundingClientRect();
+  // Performance: Cache bounding rect to avoid expensive DOM queries
+  if (!cachedContainerRect) {
+    cachedContainerRect = svgStage.getBoundingClientRect();
+  }
+  const container = cachedContainerRect;
   const x = Math.min(container.width - 18, Math.max(12, e.clientX - container.left + 12));
   const y = Math.min(container.height - 18, Math.max(12, e.clientY - container.top + 12));
-  tooltip.style.left = `${x}px`;
-  tooltip.style.top = `${y}px`;
+
+  // Performance: Use transform instead of left/top for GPU acceleration
+  tooltip.style.transform = `translate(${x}px, ${y}px)`;
 }
 
 function setupNav() {
@@ -224,17 +244,20 @@ async function render() {
   }
 }
 
-document.addEventListener("pointermove", (e) => {
+// Performance: Throttle tooltip movement to ~60fps instead of 120-240fps
+const throttledTooltipMove = throttle((e) => {
   if (tooltip && !tooltip.hidden) moveTooltipWithPointer(e);
-});
+}, 16);  // ~60fps max
 
+document.addEventListener("pointermove", throttledTooltipMove);
+
+// Performance: Invalidate cached container rect on window resize
 window.addEventListener("resize", () => {
-  // Comment: On resize, re-render only if breakpoint SVG changes.
-  render();
+  cachedContainerRect = null;
 });
 
 setupNav();
 setupPanel();
-render();
+// render(); // Disabled: Using inline SVG from HTML instead of loading from assets/svg/
 
 
