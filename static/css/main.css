@@ -472,6 +472,26 @@ svg #antenna-2-text-part {
   display: block;
 }
 
+/* SVG typography (scoped to #svgStage) */
+#svgStage svg {
+  --svg-font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --svg-label-size-sm: 9px;
+  --svg-label-weight: 600;
+  --svg-label-color: #ffffff;
+}
+#svgStage svg .product-label-text {
+  font-family: var(--svg-font-family);
+  font-size: var(--svg-label-size-sm);
+  font-weight: var(--svg-label-weight);
+  fill: var(--svg-label-color);
+}
+/* Tweak list:
+   - --svg-font-family:
+   - --svg-label-size-sm:
+   - --svg-label-weight:
+   - --svg-label-color:
+*/
+
 
 .tooltip{
   position: absolute;
