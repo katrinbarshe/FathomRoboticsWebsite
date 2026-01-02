@@ -3,9 +3,10 @@
   --bg: #0b0f12;
   --panel: #0f151a;
   --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.65);
+  --muted: rgba(255, 255, 255, 0.5);
   --line: rgba(255,255,255,.10);
   --accent: #316883;
+  --active-accent: #258fc4;
   --accent-rgb: 49, 104, 131;
   --container: 1100px;
 
@@ -76,7 +77,6 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   background: rgba(11,15,18,.65);
   border-bottom: 1px solid var(--line);
   padding: var(--space-2) 0;
-
 }
 
 .header-inner{
@@ -115,11 +115,6 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   display: block;
 }
 
-
-
-
-
-
 .site-nav{
   display: flex;
   align-items: center;
@@ -134,9 +129,6 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   color: var(--text); 
   outline: 1px solid var(--accent);
 }
-
-
-
 
 .nav-toggle{
   display: none;
@@ -263,19 +255,14 @@ svg .boat-body {
 }
 
 
-/* bright white glow on hover */
-svg .boat-part:hover {
-  filter:
-    drop-shadow(0 0 4px rgba(255,255,255,1))
-    drop-shadow(0 0 10px rgba(255,255,255,0.8));
-}
 
 /* stroke transitions smoothly (optional, but helps perceived smoothness) */
 svg .boat-part path {
   transition: stroke 160ms ease, stroke-opacity 160ms ease;
 }
 
-svg .boat-part:hover path {
+svg .boat-part:hover path:not(.hit-area),
+svg .boat-text-part:hover .boat-part path:not(.hit-area) {
   stroke: #ffffff;
   stroke-opacity: 1;
 }
@@ -292,9 +279,13 @@ svg .boat-text {
   will-change: filter;
 }
 
+/* bright white glow on hover */
 svg .boat-text:hover,
 svg .boat-text-part:hover .boat-text,
-svg .boat-text-part.is-hovered .boat-text {
+svg .boat-text-part.is-hovered .boat-text 
+svg .boat-main-text:hover,
+svg .boat-text-part:hover .boat-main-text,
+svg .boat-text-part.is-hovered .boat-main-text {
   filter:
     drop-shadow(0 0 4px rgba(255,255,255,1))
     drop-shadow(0 0 10px rgba(255,255,255,0.8));
@@ -302,14 +293,6 @@ svg .boat-text-part.is-hovered .boat-text {
 
 svg .boat-main-text {
   will-change: filter;
-}
-
-svg .boat-main-text:hover,
-svg .boat-text-part:hover .boat-main-text,
-svg .boat-text-part.is-hovered .boat-main-text {
-  filter:
-    drop-shadow(0 0 4px rgba(255,255,255,1))
-    drop-shadow(0 0 10px rgba(255,255,255,0.8));
 }
 
 .boat-text {
@@ -333,18 +316,6 @@ svg #e-stop-receiver:hover .product-label-text {
   text-underline-offset: 2px;
 }
 
-svg .boat-text-part:hover .boat-part {
-  opacity: 1;
-  filter:
-    drop-shadow(0 0 4px rgba(255,255,255,1))
-    drop-shadow(0 0 10px rgba(255,255,255,0.8));
-}
-
-svg .boat-text-part:hover .boat-part path:not(.hit-area) {
-  stroke: #ffffff;
-  stroke-opacity: 1;
-}
-
 /* Clickable SVG targets for modals */
 svg #canabas-maximus,
 svg #canabas-mini-1,
@@ -366,11 +337,13 @@ svg #antenna-2-text-part {
 .svg-modal-overlay.is-visible { display: flex; }
 .svg-modal {
   display: none;
-  background: rgba(15,21,26,0.98);
+    background: radial-gradient(1200px 800px at 70% 10%, rgba(75, 213, 255, 0.2), transparent 60%),
+              radial-gradient(900px 600px at 20% 0%, rgba(255,255,255,.06), transparent 55%),
+              var(--bg);
   color: var(--text);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 24px;
   width: min(320px, calc(100% - 40px));
   box-shadow: var(--shadow);
 }
@@ -388,16 +361,27 @@ svg #antenna-2-text-part {
   color: var(--accent);
   text-decoration: underline;
 }
+
+.svg-modal-link:hover {
+  color: var(--active-accent);
+  filter:
+    drop-shadow(0 0 4px rgba(var(--accent-rgb), 1))
+    drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.7));
+}
+
 .svg-modal-title {
   margin: 0;
   font-size: var(--step-1);
 }
 .svg-modal-close {
+  display: block;
+  margin-left: auto;
   background: transparent;
   border: 0;
   color: var(--muted);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 26px;
+  
 }
 .svg-modal-close:hover { color: var(--text); }
 .svg-modal-body { margin-top: 8px; }
