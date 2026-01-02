@@ -22,9 +22,14 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow text-body">Autonomy. Sensing. Action.</div>
-          <div class="hero-title text-title-lg">Field-ready robotics for water and beyond.</div>
+    <!--  <div class="eyebrow text-body">Autonomy. Sensing. Action.</div> -->
+          <div class="eyebrow text-body">OPERATE. TRAIN. SUSTAIN.</div>
+          <div class="hero-title text-title-lg"> Advancing the Adoption of Uncrewed Maritime Systems (UMS) through Critical Support Services</div>
+          <p class="hero-subtitle">
+            Field-ready robotics for water and beyond.
+          </p>
         </div>
+        
 
         <!-- Inline SVG BOAT IMAGE -->
         <div class="svg-stage" id="svgStage">
@@ -817,27 +822,6 @@
       </div>
     </section> -->
 
-    <!-- Mission
-    <section class="section" id="mission">
-      <div class="container">
-        <div class="text-title-md">Mission</div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="text-title-sm">Safety</div>
-            <div class="text-body">Design for predictable behavior and clear operator control.</div>
-          </div>
-          <div class="card">
-            <div class="text-title-sm">Data</div>
-            <div class="text-body">Reliable data collection where it’s hard (or boring) for humans.</div>
-          </div>
-          <div class="card">
-            <div class="text-title-sm">Impact</div>
-            <div class="text-body">Conservation, inspection, monitoring, and operational intelligence.</div>
-          </div>
-        </div>
-      </div>
-    </section>  -->
-
     <!-- Tech
     <section class="section" id="tech">
       <div class="container two-col">
@@ -860,9 +844,48 @@
       </div>
     </section> -->
 
+    <!-- Mission -->
+    <section class="section" id="mission">
+      <div class="container">
+        <div class="text-title-md">Operational Capabilities</div>
+        <div class="grid-3">
+
+          <div class="card">
+            <img class="product-image" src="images/work.png" alt="CANaBUS Mini">
+            <div class="text-title-sm">FathomOps™ — Operations and Maintenance for Maritime Autonomous Systems</div>
+            <div class="text-body">
+              <p class="text-paragraph">FathomOps™ provides the people, processes, and standards that sustain mission-ready performance across maritime autonomous fleets. Our mariners, USV pilots, and maintenance teams follow standardized procedures that ensure safe, reliable, and environmentally responsible operations for multi-vendor uncrewed surface vessels.</p>
+              <p class="text-paragraph">Built on internationally recognized management standards for quality, safety, and environmental compliance, FathomOps™ delivers turnkey operations, maintenance, and piloting support to keep every vessel mission-ready.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="product-image" src="images/kilo.png" alt="CANaBUS Mini">
+            <div class="text-title-sm">FathomRed™ — Threat Replication and Opposition Force Services</div>
+            <div class="text-body">
+              <p class="text-paragraph">FathomRed™ delivers realistic, repeatable threat replication to prepare warfighters for the challenges of emerging autonomous systems.</p>
+              <p class="text-paragraph">Using modified uncrewed surface and ground vessels (USVs and UGVs), our teams emulate adversary signatures, profiles, and behaviors for live-fire, electronic warfare, and weapons test and evaluation (WT&E) events.</p>
+              <p class="text-paragraph">Each platform is configured to replicate specific threat dynamics, while Fathom operators manage deployment, control, and data capture throughout the mission. FathomRed™ enables Fleet and range customers to conduct complex, high-fidelity exercises that validate tactics and strengthen readiness across training and test environments.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="product-image" src="images/control.png" alt="CANaBUS Mini">
+            <div class="text-title-sm">FathomX™ — Training and Education for Expeditionary UxS</div>
+            <div class="text-body">
+              <p class="text-paragraph">FathomX™ teaches servicemembers how to build, integrate, and operate uncrewed systems from the ground up.</p>
+              <p class="text-paragraph">Through hands-on instruction, participants learn the core components of autonomy including power, propulsion, sensors, networks, and software, and how to assemble and configure them into fully functional surface, ground, or aerial systems.</p>
+              <p class="text-paragraph">Built around a train-the-trainer approach, FathomX™ prepares Navy and Special Operations personnel to teach and sustain autonomy within their own units. Courses use COTS-based hardware and software adaptable across multiple vessel types and are conducted in expeditionary environments that reflect real operational conditions.</p>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="product-picking"></div>
+  <div id="contact"></div>
   <div id="site-footer"></div>
 
   <!-- SVG modals -->
@@ -916,6 +939,7 @@
       await loadFragment("header.html", "site-header");
       await loadFragment("footer.html", "site-footer");
       await loadFragment("product-picking.html", "product-picking");
+      await loadFragment("contact.html", "contact");
       await loadScript("js/main.js");
     })();
   </script>
