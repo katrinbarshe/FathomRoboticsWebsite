@@ -15,186 +15,83 @@
     <div class="product-hero" id="canabus-maximus-hero" style="background-image: url('images/canabus-maximus-hero.png')">
       <div class="text-title-xl product-hero-title">CANaBUS<br>Maximus</div>
     </div>
+
+    <!-- CANaBUS Maximus Description -->
     <section class="section" id="canabus-maximus">
-      <div class="container">
-        <div class="text-title-lg">Product Description: CANaBUS Maximus</div>
-        <div class="card" id="canabus-maximus-card">
-          <div class="text-title-sm">All-In-One Marine Autonomy Computer for Unmanned Surface Vessels</div>
-          <div class="text-body text-body-muted">Enterprise-Grade Integrated Autonomy Platform</div>
-          <div class="text-body">The CANaBUS Maximus represents the pinnacle of marine autonomy integration—a single-board computer that consolidates an entire USV autonomy stack into one rugged, production-ready package. Where previous solutions required separate devices for computation (Raspberry Pi), navigation (PixHawk Cube), and positioning (GPS/RTK module), the CANaBUS Maximus integrates all critical subsystems onto a single PCB within an IP67-rated automotive enclosure.</div>
+      <div class="container two-col">
+        <div>
+          <div class="text-title-lg">All-In-One Marine Autonomy Computer for Unmanned Surface Vessels</div>
+          <div class="text-body"><span class="text-strong">Enterprise-Grade Integrated Autonomy Platform</span><br>
+          The CANaBUS Maximus represents the pinnacle of marine autonomy integration—a single-board computer that consolidates an entire USV autonomy stack into one rugged, production-ready package. Where previous solutions required separate devices for computation (Raspberry Pi), navigation (PixHawk Cube), and positioning (GPS/RTK module), the CANaBUS Maximus integrates all critical subsystems onto a single PCB within an IP67-rated automotive enclosure.</div>
           <div class="text-body">Built around the powerful Raspberry Pi Compute Module 5, paired with a PixHawk Cube Orange autopilot and precision RTK-capable GPS, this platform eliminates the complexity of multi-device integration while delivering professional-grade performance for commercial USV operations. The result is reduced cabling, simplified installation, improved reliability, and dramatically lower deployment time.</div>
           <div class="text-body">The CANaBUS Maximus is designed for operators who demand turnkey autonomy solutions without sacrificing flexibility. Whether running ROS2 navigation stacks, ArduPilot mission planning, or custom Fathom Companion interfaces, this integrated platform provides the computational horsepower, sensor fusion capabilities, and real-time control necessary for demanding maritime autonomy applications.</div>
+        </div>
 
-          <div class="text-title-sm">Key Highlights</div>
-          <div class="text-body"><span class="text-strong">Integrated Compute Module 5 Platform:</span> Raspberry Pi Compute Module 5 provides quad-core ARM Cortex-A76 processing at 2.4GHz with up to 8GB RAM—delivering desktop-class performance for ROS2 navigation, machine learning inference, computer vision processing, and multi-sensor fusion. Native PCIe, dual HDMI, and USB 3.0 support enable direct connection to high-bandwidth peripherals.</div>
-          <div class="text-body"><span class="text-strong">Embedded PixHawk Cube Orange Autopilot:</span> Full ArduPilot/PX4 autopilot integration with triple-redundant IMUs, barometric altimeter, and magnetometer. The Cube Orange provides L3-certified flight controller capabilities adapted for marine autonomous navigation—enabling waypoint following, geofencing, fail-safe return-to-home, and mission scripting.</div>
-          <div class="text-body"><span class="text-strong">RTK-Enabled Precision GPS:</span> AS-RTK2B module with u-blox F9P dual-frequency (L1/L2) GNSS receiver delivers centimeter-level positioning accuracy when configured with RTK base station corrections. Supports GPS, GLONASS, Galileo, and BeiDou constellations for maximum availability and redundancy.</div>
-          <div class="text-body"><span class="text-strong">Triple Independent CAN Bus Interfaces:</span> Three galvanically isolated CAN 2.0B ports (using TCAN4550 transceivers) provide simultaneous connectivity to engines, steering actuators, navigation equipment, and auxiliary systems—identical capability to the CANaBUS Mini but integrated into a unified platform.</div>
-          <div class="text-body"><span class="text-strong">Onboard Ethernet Switch:</span> KSZ8863 dual-port Gigabit Ethernet switch enables daisy-chaining of IP-based sensors, cameras, and telemetry equipment directly through the CANaBUS Maximus enclosure—reducing harness complexity and simplifying network architecture.</div>
-          <div class="text-body"><span class="text-strong">Expandable NVMe Storage:</span> M.2 NVMe slot supports high-speed solid-state storage for mission logging, video recording, map data, and neural network model storage. PCIe Gen 2 interface delivers up to 2GB/s throughput—critical for data-intensive autonomy applications.</div>
-          <div class="text-body"><span class="text-strong">Real-Time Clock with Battery Backup:</span> CR2032-backed RTC maintains accurate timekeeping across power cycles—essential for timestamping sensor data, GPS time synchronization, and mission replay analysis.</div>
-          <div class="text-body"><span class="text-strong">Single-Board Integration:</span> Replaces three separate devices (Raspberry Pi + PixHawk Cube + GPS module) with one integrated board, reducing points of failure, eliminating inter-device communication latency, and simplifying installation, maintenance, and troubleshooting.</div>
-
-          <div class="text-title-sm">Technical Specifications</div>
-          <div class="text-body text-strong">System Architecture Overview</div>
-          <div class="text-body"><span class="text-strong">Component:</span> Specification</div>
-          <div class="text-body"><span class="text-strong">Main Processor:</span> Raspberry Pi Compute Module 5 (CM5)</div>
-          <div class="text-body"><span class="text-strong">CPU:</span> Quad-core ARM Cortex-A76 @ 2.4GHz</div>
-          <div class="text-body"><span class="text-strong">RAM:</span> 4GB / 8GB LPDDR4X options</div>
-          <div class="text-body"><span class="text-strong">GPU:</span> VideoCore VII with OpenGL ES 3.1, Vulkan 1.3</div>
-          <div class="text-body"><span class="text-strong">Storage:</span> MicroSD card slot + M.2 2280 NVMe slot (PCIe Gen 2 x1)</div>
-          <div class="text-body"><span class="text-strong">Operating System:</span> Raspberry Pi OS, Ubuntu 22.04 LTS, ROS2 Humble/Iron</div>
-
-          <div class="text-body text-strong">Autopilot Subsystem</div>
-          <div class="text-body"><span class="text-strong">Autopilot:</span> PixHawk Cube Orange (80-pin DF17 connector)</div>
-          <div class="text-body"><span class="text-strong">Processor:</span> STM32F765 (216MHz) + STM32F100 (coprocessor)</div>
-          <div class="text-body"><span class="text-strong">IMU:</span> Triple redundant: ICM-20948, ICM-20602, ICM-20602</div>
-          <div class="text-body"><span class="text-strong">Barometer:</span> MS5611</div>
-          <div class="text-body"><span class="text-strong">Magnetometer:</span> IST8310</div>
-          <div class="text-body"><span class="text-strong">Firmware:</span> ArduRover, ArduBoat, PX4 (user-selectable)</div>
-          <div class="text-body"><span class="text-strong">Interfaces:</span> 8x PWM outputs, 6x UART, I2C, SPI, CAN</div>
-
-          <div class="text-body text-strong">GNSS/GPS Subsystem</div>
-          <div class="text-body"><span class="text-strong">GPS Module:</span> AS-RTK2B-MICRO with u-blox ZED-F9P</div>
-          <div class="text-body"><span class="text-strong">Frequency:</span> Dual-band L1/L2 (1575.42 MHz / 1227.60 MHz)</div>
-          <div class="text-body"><span class="text-strong">Constellations:</span> GPS, GLONASS, Galileo, BeiDou, QZSS</div>
-          <div class="text-body"><span class="text-strong">RTK Capability:</span> Horizontal: 0.01m + 1ppm CEP, Vertical: 0.02m + 1ppm CEP</div>
-          <div class="text-body"><span class="text-strong">Update Rate:</span> Up to 25Hz standard, 20Hz RTK mode</div>
-          <div class="text-body"><span class="text-strong">Time-to-First-Fix:</span> Cold start: 24s, Aided: 2s, Hot start: 2s</div>
-          <div class="text-body"><span class="text-strong">Heading Output:</span> Dual-antenna configuration supported (moving baseline)</div>
-
-          <div class="text-body text-strong">Communication Interfaces</div>
-          <div class="text-body"><span class="text-strong">CAN Bus:</span> 3x Independent CAN 2.0B (TCAN4550 transceivers)</div>
-          <div class="text-body"><span class="text-strong">CAN Bit Rate:</span> 125k / 250k / 500k / 1Mbps (per channel)</div>
-          <div class="text-body"><span class="text-strong">CAN Termination:</span> Switchable 120Ω on-board (per channel)</div>
-          <div class="text-body"><span class="text-strong">CAN Protection:</span> ESD protection, short-circuit protection</div>
-          <div class="text-body"><span class="text-strong">Ethernet:</span> 1x Gigabit + 2x switched Gigabit ports (KSZ8863)</div>
-          <div class="text-body"><span class="text-strong">USB:</span> 1x USB-C (host/device), 2x USB 2.0 (CM5 native)</div>
-          <div class="text-body"><span class="text-strong">Serial UART:</span> 2x RS-232/TTL (available from CM5)</div>
-          <div class="text-body"><span class="text-strong">GPIO:</span> 28 GPIO pins available via CM5 header</div>
-          <div class="text-body"><span class="text-strong">I2C / SPI:</span> Available via internal expansion header</div>
-
-          <div class="text-body text-strong">Power System</div>
-          <div class="text-body"><span class="text-strong">Input Voltage:</span> 12V DC nominal (9-18V operating range)</div>
-          <div class="text-body"><span class="text-strong">Input Protection:</span> Reverse polarity, overvoltage, transient suppression</div>
-          <div class="text-body"><span class="text-strong">Power Consumption:</span> 8-15W typical (depends on CM5 load + peripherals)</div>
-          <div class="text-body"><span class="text-strong">DC-DC Converter:</span> LM5146 multi-output buck converter</div>
-          <div class="text-body"><span class="text-strong">Regulated Outputs:</span> 12V, 5V, 3.3V (for internal subsystems)</div>
-          <div class="text-body"><span class="text-strong">RTC Battery:</span> CR2032 coin cell (≥5 year lifespan)</div>
-
-          <div class="text-body text-strong">Environmental & Mechanical</div>
-          <div class="text-body"><span class="text-strong">Enclosure Rating:</span> IP67 (dust-tight, waterproof to 1m for 30min)</div>
-          <div class="text-body"><span class="text-strong">Operating Temperature:</span> -20°C to +70°C (extended: -40°C to +85°C optional)</div>
-          <div class="text-body"><span class="text-strong">Storage Temperature:</span> -40°C to +85°C</div>
-          <div class="text-body"><span class="text-strong">Humidity:</span> 5% to 95% non-condensing</div>
-          <div class="text-body"><span class="text-strong">Vibration:</span> MIL-STD-810G compliant (marine environment)</div>
-          <div class="text-body"><span class="text-strong">Shock:</span> 50g peak acceleration (IEC 60068-2-27)</div>
-          <div class="text-body"><span class="text-strong">Conformal Coating:</span> MIL-A-46106 Type UR (corrosion protection)</div>
-          <div class="text-body"><span class="text-strong">Weight:</span> ~450g (enclosure + PCB + components)</div>
-
-          <div class="text-title-sm">Operating Modes & Software Stacks</div>
-          <div class="text-body">The CANaBUS Maximus supports multiple software configurations to match different operational requirements and user expertise levels.</div>
-          <div class="text-body text-strong">Mode 1: ROS2 Autonomy Stack (Recommended for Research & Advanced Users)</div>
-          <div class="text-body">Deploy full ROS2 (Robot Operating System 2) on the Compute Module 5 for maximum flexibility and integration with the robotics ecosystem.</div>
-          <div class="text-body text-strong">Key Features:</div>
-          <div class="text-body">Native ROS2 Humble or Iron support on Ubuntu 22.04 LTS; custom ROS2 nodes for CAN bus devices (engines, steering, sensors); integration with Nav2 navigation stack; SLAM with LIDAR/camera; sensor fusion with robot_localization; MoveIt integration; RViz visualization and Gazebo simulation; access to ROS2 packages.</div>
-          <div class="text-body text-strong">Typical Use Cases:</div>
-          <div class="text-body">Academic research projects; multi-sensor fusion experiments; computer vision and AI/ML development; advanced perception systems; custom autonomy behaviors requiring full ROS2 flexibility.</div>
-          <div class="text-body text-strong">Architecture:</div>
-          <div class="text-body">CM5 (ROS2 Humble) ↔ PixHawk Cube (ArduPilot via MAVLink) → CAN Bus Nodes → Nav2 Stack → RTK GPS.</div>
-
-          <div class="text-body text-strong">Mode 2: ArduPilot/Mission Planner (Best for Waypoint Navigation)</div>
-          <div class="text-body">Run ArduRover or ArduBoat firmware on the PixHawk Cube Orange, using the CM5 as a companion computer for telemetry, video streaming, and payload management.</div>
-          <div class="text-body text-strong">Key Features:</div>
-          <div class="text-body">Proven ArduPilot autonomy algorithms; Mission Planner / QGroundControl integration; MAVLink telemetry; geofencing; automated survey patterns; conditional commands; companion software on CM5 for advanced features.</div>
-          <div class="text-body text-strong">Typical Use Cases:</div>
-          <div class="text-body">Survey and mapping missions; patrol routes; search patterns; aquaculture inspection; harbor security patrol routes.</div>
-          <div class="text-body text-strong">Architecture:</div>
-          <div class="text-body">PixHawk Cube (ArduRover) → Autopilot Control; CM5 (Companion) → Video Streaming, Telemetry Relay; CAN Bus → Engine/Steering via CANaBUS translation layer.</div>
-
-          <div class="text-body text-strong">Mode 3: Fathom Companion Web Interface (Recommended for Commercial Operations)</div>
-          <div class="text-body">Deploy the KiloWebInterface on the CM5 for a turnkey, zero-install remote operation platform accessible from any web browser.</div>
-          <div class="text-body text-strong">Key Features:</div>
-          <div class="text-body">Professional web-based control dashboard; real-time telemetry display; interactive map; sub-100ms command latency; customizable widget-based interface; multi-protocol device support; sensor fusion with data logging; event-driven automation; AI/ML integration; fleet management; mission replay; video streaming integration.</div>
-          <div class="text-body text-strong">Typical Use Cases:</div>
-          <div class="text-body">Shore-based remote piloting; multi-vessel fleet operations; custom mission profiles; enterprise system integrations; demonstrations and trials.</div>
-          <div class="text-body text-strong">Architecture:</div>
-          <div class="text-body">CM5 (KiloWebInterface Server) → Drivers for CAN/Serial/GPIO → Web UI → Remote Operator.</div>
-          <div class="text-body text-strong">GitHub:</div>
-          <div class="text-body">github.com/isensystech/KiloWebInterface</div>
-
-          <div class="text-body text-strong">Mode 4: Hybrid Architecture (Advanced Integration)</div>
-          <div class="text-body">Combine multiple modes for maximum capability—for example, running ROS2 on the CM5 while leveraging the PixHawk Cube's autopilot algorithms. PixHawk Cube handles stabilization and waypoint navigation; CM5 runs high-level mission planner, AI, and sensor fusion.</div>
-
-          <div class="text-title-sm">System Integration Benefits</div>
-          <div class="text-body text-strong">Before CANaBUS Maximus: Multi-Device Complexity</div>
-          <div class="text-body">Traditional USV autonomy stacks require multiple separate devices (compute, autopilot, GPS, CAN interfaces), creating complex wiring, multiple power domains, latency, and maintenance overhead.</div>
-          <div class="text-body text-strong">Problems with Traditional Approach:</div>
-          <div class="text-body">Complex wiring; lengthy installation; multiple failure points; serial communication latency; difficult troubleshooting; large space requirements; vibration sensitivity; configuration drift.</div>
-          <div class="text-body text-strong">After CANaBUS Maximus: Single-Board Simplicity</div>
-          <div class="text-body">Integrated CANaBUS Maximus consolidates compute, autopilot, GPS, and CAN/Ethernet backbones into one enclosure, simplifying installation, reducing cables, improving reliability, and lowering latency.</div>
-          <div class="text-body text-strong">Advantages of Integrated Approach:</div>
-          <div class="text-body">Single enclosure and power input; fewer cables; higher reliability; sub-5ms on-board communication; simpler diagnostics; compact form factor; vibration resistance; unified configuration.</div>
-
-          <div class="text-title-sm">Connectivity & Interfaces</div>
-          <div class="text-body text-strong">External Connectors</div>
-          <div class="text-body"><span class="text-strong">CAN Bus Ports (3x):</span> JST GH 4-pin connectors with configurable termination and isolation.</div>
-          <div class="text-body"><span class="text-strong">Ethernet Ports:</span> 1x primary RJ45 + 2x switched RJ45 (auto-MDIX, 10/100/1000 Mbps).</div>
-          <div class="text-body"><span class="text-strong">USB-C Port:</span> USB 2.0 Host/Device, OTG capable.</div>
-          <div class="text-body"><span class="text-strong">MicroSD Card Slot:</span> Primary boot media, hot-swappable.</div>
-          <div class="text-body"><span class="text-strong">M.2 NVMe Slot:</span> 2280, PCIe Gen 2 x1, up to 2TB.</div>
-          <div class="text-body"><span class="text-strong">PixHawk Cube Expansion:</span> 80-pin DF17 connector with PWM, UART, CAN, I2C, SPI, ADC, GPIO.</div>
-          <div class="text-body"><span class="text-strong">GPS Antenna Connection:</span> SMA or u.FL; supports active antennas and dual-antenna heading.</div>
-          <div class="text-body text-strong">Status Indicators</div>
-          <div class="text-body">Power, activity, Ethernet, CAN, GPS fix, RTK status, and user-programmable LEDs for diagnostics.</div>
-
-          <div class="text-title-sm">Supported Protocols & Devices</div>
-          <div class="text-body text-strong">Marine CAN Protocols (Inherited from CANaBUS Mini)</div>
-          <div class="text-body">Engine control units (Volvo Penta, Yamaha, Mercury, Yanmar, Cummins, Caterpillar, John Deere); steering systems (Teleflex, Octopus, Garmin/Simrad/Raymarine autopilots, Hypro/Kobelt, Dometic); navigation/autopilot equipment (Garmin, Simrad, Raymarine, Furuno, B&G); additional systems (trim tabs, thrusters, battery monitoring, tank sensors).</div>
-          <div class="text-body text-strong">DBC File Library</div>
-          <div class="text-body">Includes decoded message definitions for major marine manufacturers and devices. GitHub: github.com/isensystech/marine-dbc-library</div>
-
-          <div class="text-title-sm">Ideal Applications</div>
-          <div class="text-body">Autonomous survey & mapping vessels; commercial aquaculture automation; maritime security & harbor patrol; search and rescue support; oceanographic research platforms; military & defense USV programs; recreational & sport fishing; vessel retrofit & modernization.</div>
-
-          <div class="text-title-sm">Getting Started</div>
-          <div class="text-body text-strong">Quick Start Guide</div>
-          <div class="text-body"><span class="text-strong">Hardware Installation:</span> Mount CANaBUS Maximus; connect 12V DC; connect CAN buses; connect Ethernet; mount GPS antenna; connect RTK correction source.</div>
-          <div class="text-body"><span class="text-strong">Initial Configuration:</span> Insert pre-loaded MicroSD; power on; access configuration; set network; load DBC files; calibrate compass/IMU; set home and geofence.</div>
-          <div class="text-body"><span class="text-strong">Software Selection:</span> ROS2 (Ubuntu 22.04 + ROS2 Humble), ArduPilot companion stack, or Fathom Companion (KiloWebInterface).</div>
-          <div class="text-body"><span class="text-strong">Testing & Validation:</span> Shore-based checks, GPS/RTK verification, remote control tests, dockside trials, open-water trials.</div>
-
-          <div class="text-title-sm">Software Resources</div>
-          <div class="text-body">Pre-built images available on request; documentation for wiring, DBC references, ROS2 APIs, mission planning tutorials; support via forums, GitHub issues, email, and custom services.</div>
-
-          <div class="text-title-sm">Comparison: CANaBUS Mini vs. CANaBUS Maximus</div>
-          <div class="text-body">Maximus: all-in-one autonomy computer (CM5, PixHawk Cube, RTK GPS, triple CAN, Ethernet switch, NVMe). Mini: external companion device focused on CAN integration. Choose Mini for retrofit/CAN translation; choose Maximus for new builds and full integration.</div>
-
-          <div class="text-title-sm">Safety & Compliance</div>
-          <div class="text-body">Professional-grade platform for supervised autonomous operations. Users must comply with maritime regulations, maintain redundant safety systems, ensure manual override, apply geofencing, perform thorough testing, and observe environmental considerations.</div>
-
-          <div class="text-title-sm">Customization & Professional Services</div>
-          <div class="text-body">Fathom Robotics offers custom firmware, integration services, training, support, and consulting for compliance, safety design, mission planning, and optimization.</div>
-
-          <div class="text-title-sm">Ordering Information</div>
-          <div class="text-body text-strong">Standard Configuration</div>
-          <div class="text-body">Part Number: CANABUS-MAX-CM5-8GB. Includes: CANaBUS Maximus main board, CM5 (8GB), PixHawk Cube Orange, AS-RTK2B GPS (F9P), IP67 enclosure, GPS antenna, power cable, CAN cables, Ethernet cable, USB-C cable, pre-loaded MicroSD, quick start guide.</div>
-          <div class="text-body text-strong">Optional Accessories</div>
-          <div class="text-body">Extended GPS cables, high-gain antenna, RTK base station kit, additional CAN cables, NVMe SSDs, wireless telemetry modules, professional calibration, extended DBC library.</div>
-          <div class="text-body text-strong">Warranty & Support</div>
-          <div class="text-body">2-year limited hardware warranty; 1-year firmware updates; support forum access; optional extended support.</div>
-          <div class="text-body text-strong">Volume Pricing</div>
-          <div class="text-body">5-10 units: 10% discount; 11-25 units: 15%; 26-50 units: 20%; 50+ contact for enterprise pricing.</div>
-
-          <div class="text-title-sm">Configuration Options</div>
-          <div class="text-body">CM5 RAM options (4GB/8GB); GPS module options; software bundles (base, ROS2, ArduPilot, KiloWebInterface).</div>
-
-          <div class="text-title-sm">Conclusion</div>
-          <div class="text-body">The CANaBUS Maximus consolidates compute, autopilot, GPS, and CAN networking into one ruggedized board, eliminating complexity while delivering professional-grade performance for research, commercial, and defense USVs. It offers single-board simplicity, native ROS2/ArduPilot support, IP67 protection, extensive protocol support, and professional services.</div>
-          <div class="text-body text-strong">CANaBUS Maximus - The complete autonomy solution in a single enclosure.</div>
+        <div class="card">
+          <img class="product-image" src="images/canabus-maximus.png" alt="CANaBUS Mini">
         </div>
       </div>
     </section>
+
+        
+    <!-- CANaBUS Maximus Description 
+    <section class="section" id="canabus-maximus">
+      <div class="container two-col">
+        <div>
+          <div class="text-title-lg">All-In-One Marine Autonomy Computer for Unmanned Surface Vessels</div>
+          <div class="text-body"><span class="text-strong">Enterprise-Grade Integrated Autonomy Platform</span><br>
+          The CANaBUS Maximus represents the pinnacle of marine autonomy integration—a single-board computer that consolidates an entire USV autonomy stack into one rugged, production-ready package. Where previous solutions required separate devices for computation (Raspberry Pi), navigation (PixHawk Cube), and positioning (GPS/RTK module), the CANaBUS Maximus integrates all critical subsystems onto a single PCB within an IP67-rated automotive enclosure.</div>
+          <div class="text-body">Built around the powerful Raspberry Pi Compute Module 5, paired with a PixHawk Cube Orange autopilot and precision RTK-capable GPS, this platform eliminates the complexity of multi-device integration while delivering professional-grade performance for commercial USV operations. The result is reduced cabling, simplified installation, improved reliability, and dramatically lower deployment time.</div>
+          <div class="text-body">The CANaBUS Maximus is designed for operators who demand turnkey autonomy solutions without sacrificing flexibility. Whether running ROS2 navigation stacks, ArduPilot mission planning, or custom Fathom Companion interfaces, this integrated platform provides the computational horsepower, sensor fusion capabilities, and real-time control necessary for demanding maritime autonomy applications.</div>
+          <img class="product-image" src="images/canabus-maximus.png" alt="CANaBUS Mini">
+        </div>
+
+        <div class="card">
+          <div class="text-title-sm">SPECIFICATIONS</div>
+          <table class="spec-table text-body">
+            <tbody>
+              <tr><td class="text-strong">Microcontroller</td><td>ARM Cortex-M7 @ 600MHz</td></tr>
+              <tr><td class="text-strong">Operating Voltage</td><td>12V DC nominal (9—16V input range)</td></tr>
+              <tr><td class="text-strong">Power Consumption</td><td>&lt;5W typical, &lt;8W maximum</td></tr>
+              <tr><td class="text-strong">Environmental Rating</td><td>IP69K (dust-tight, waterproof)</td></tr>
+              <tr><td class="text-strong">Operating t°</td><td>-40 to +85 °C</td></tr>
+              <tr><td class="text-strong">Dimensions / Weight</td><td>W 118.80 mm, L 114.00 mm, H 34.75 mm, 210 g</td></tr>
+              <tr><td class="text-strong">CAN Bus Channels</td><td>3x Independent CAN 2.0B (isolated)</td></tr>
+              <tr><td class="text-strong">CAN Bit Rates</td><td>Configurable: 125k, 250k, 500k, 1Mbps</td></tr>
+              <tr><td class="text-strong">CAN Termination</td><td>Switchable 120Ω on-board (per channel)</td></tr>
+              <tr><td class="text-strong">Ethernet</td><td>10/100 Mbps</td></tr>
+              <tr><td class="text-strong">Serial UART</td><td>2x RS-232/TTL configurable</td></tr>
+              <tr><td class="text-strong">Expansion</td><td>I2C, GPIO, SPI available via internal header</td></tr>
+              <tr><td class="text-strong">Supported Protocols</td><td>CAN 2.0B, NMEA 2000, J1939</td></tr>
+              <tr><td class="text-strong">Message Filtering</td><td>Hardware filters + software acceptance masks</td></tr>
+              <tr><td class="text-strong">Transmission Rate</td><td>Up to 16,000 frames/second (aggregate)</td></tr>
+              <tr><td class="text-strong">DBC File Support</td><td>Native parsing and message translation</td></tr>
+              <tr><td class="text-strong">Bus Monitoring</td><td>Real-time diagnostics, error detection, statistics</td></tr>
+              <tr><td class="text-strong">Propulsion &amp; control</td><td>Inquire for currently supported, propulsion and control systems</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Highlights -->
+    <section class="section" id="canabas-maximus-highlights">
+      <div class="container">
+        <div class="text-title-lg">Key Highlights</div>
+          <div class="modes-grid">
+            <div class="text-body"><span class="text-strong">Integrated Compute Module 5 Platform: </span> <br>Raspberry Pi Compute Module 5 provides quad-core ARM Cortex-A76 processing at 2.4GHz with up to 8GB RAM—delivering desktop-class performance for ROS2 navigation, machine learning inference, computer vision processing, and multi-sensor fusion. Native PCIe, dual HDMI, and USB 3.0 support enable direct connection to high-bandwidth peripherals.</div>
+            <div class="text-body"><span class="text-strong">Embedded PixHawk Cube Orange Autopilot: </span> <br>Full ArduPilot/PX4 autopilot integration with triple-redundant IMUs, barometric altimeter, and magnetometer. The Cube Orange provides L3-certified flight controller capabilities adapted for marine autonomous navigation—enabling waypoint following, geofencing, fail-safe return-to-home, and mission scripting.</div>
+            <div class="text-body"><span class="text-strong">RTK-Enabled Precision GPS: </span> <br>AS-RTK2B module with u-blox F9P dual-frequency (L1/L2) GNSS receiver delivers centimeter-level positioning accuracy when configured with RTK base station corrections. Supports GPS, GLONASS, Galileo, and BeiDou constellations for maximum availability and redundancy.</div>
+            <div class="text-body"><span class="text-strong">Triple Independent CAN Bus Interfaces: </span> <br>Three galvanically isolated CAN 2.0B ports (using TCAN4550 transceivers) provide simultaneous connectivity to engines, steering actuators, navigation equipment, and auxiliary systems—identical capability to the CANaBUS Mini but integrated into a unified platform.</div>
+            <div class="text-body"><span class="text-strong">Onboard Ethernet Switch: </span> <br>KSZ8863 dual-port Gigabit Ethernet switch enables daisy-chaining of IP-based sensors, cameras, and telemetry equipment directly through the CANaBUS Maximus enclosure—reducing harness complexity and simplifying network architecture.</div>
+            <div class="text-body"><span class="text-strong">Expandable NVMe Storage: </span> <br>M.2 NVMe slot supports high-speed solid-state storage for mission logging, video recording, map data, and neural network model storage. PCIe Gen 2 interface delivers up to 2GB/s throughput—critical for data-intensive autonomy applications.</div>
+            <div class="text-body"><span class="text-strong">Real-Time Clock with Battery Backup: </span> <br>CR2032-backed RTC maintains accurate timekeeping across power cycles—essential for timestamping sensor data, GPS time synchronization, and mission replay analysis.</div>
+            <div class="text-body"><span class="text-strong">Single-Board Integration: </span> <br>Replaces three separate devices (Raspberry Pi + PixHawk Cube + GPS module) with one integrated board, reducing points of failure, eliminating inter-device communication latency, and simplifying installation, maintenance, and troubleshooting.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="product-picking"></div>
