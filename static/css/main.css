@@ -399,6 +399,19 @@ svg #antenna-2-text-part {
 
 /* Image helper */
 .product-image { width: 100%; border-radius: 12px; margin-bottom: 12px; display: block; }
+
+.canabus-mini-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .canabus-mini-images {
+    grid-template-columns: 1fr;
+  }
+}
 .certifications-image { 
   display: block; }
 
@@ -480,14 +493,20 @@ svg #antenna-2-text-part {
 .spec-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 .spec-table td {
   padding: 6px 0;
   vertical-align: top;
+  width: 40%;
 }
 .spec-table td:first-child {
   padding-right: 12px;
   white-space: nowrap;
+  width: 40%;
+}
+.spec-table td:last-child {
+  width: 60%;
 }
 
 .modes-grid {

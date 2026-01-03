@@ -15,16 +15,125 @@
     <div class="product-hero" id="e-stop-hero" style="background-image: url('images/e-stop-hero.png')">
       <div class="text-title-xl product-hero-title">E-STOP<br>Receiver</div>
     </div>
-    <section class="section" id="e-stop">
+
+    <!-- E-Stop Description -->
+     <section class="section" id="e-stop">
+      <div class="container two-col">
+        <div>
+          <div class="text-title-lg">Mobile Emergency Stop Protection for Robotics & Industrial Safety</div>
+          <div class="text-body">The Fathom Robotics Wireless E-Stop System provides a robust, fail-safe solution for immediate equipment shutdown in environments where hardwired safety systems are impractical or restrictive. Designed for robotics, autonomous platforms, and industrial machinery, this system ensures that operators maintain full safety control from a distance.</div>
+          <div class="text-body">The system consists of a handheld Transmitter (TX) and a stationary Receiver (RX) that maintain a continuous, two-way heartbeat link. In the event of an emergency, a button press instantly triggers the receiver to open safety relays, halting machine operation. Crucially, the system features active fail-safe monitoring: if the wireless link is lost due to interference, range issues, or power failure, the receiver automatically defaults to a safe "STOP" state.</div>
+          <div class="text-body">With a high-reliability LoRa radio link and customizable safety logic, the Fathom Robotics E-Stop is an essential safety layer for dynamic industrial environments.</div>
+          <div class="canabus-mini-images">
+            <img class="product-image" src="images/IMG_1615.jpg" alt="CANaBUS Mini">
+            <img class="product-image" src="images/IMG_1636.jpg" alt="CANaBUS Mini">
+          </div>
+        </div>
+
+        <div class="card" id="e-stop-specifications">
+          <div class="text-title-sm">SYSTEM SPECIFICATIONS</div>
+          <table class="spec-table text-body">
+            <tbody>
+              <tr><td class="text-strong">Frequency</td><td>433 MHz (E32 LoRa Radio Module)</td></tr>
+              <tr><td class="text-strong">Microcontroller</td><td>Teensy 4.0 (ARM Cortex-M7)</td></tr>
+              <tr><td class="text-strong">Communication Protocol</td><td>Packet-based encrypted link with EasyTransfer library</td></tr>
+              <tr><td class="text-strong">Response Time</td><td>Immediate upon button press; <1s active link timeout</td></tr>
+              <tr><td class="text-strong">Operating Range</td><td>Dependent on LoRa module configuration (typically 1km+ line-of-sight)</td></tr>
+              <tr><td class="text-strong">Fail-Safe Logic</td><td>Defaults to STOP on power-up, signal loss, or hardware fault</td></tr>
+            </tbody>
+          </table>
+
+          <div class="text-title-sm">RECEIVER (RX) SPECIFICATIONS</div>
+          <table class="spec-table text-body">
+            <tbody>
+              <tr><td class="text-strong">Input Power</td><td>12V DC</td></tr>
+              <tr><td class="text-strong">Safety Outputs</td><td>4x Independent Relays (Active-Low Control)<br>
+                • <span class="text-strong">Relay 1: </span> E-Stop Interlock<br>
+                • <span class="text-strong">Relay 2: </span> Engine/Machine Run<br>
+                • <span class="text-strong">Relay 3: </span> Toggle Indicator<br>
+                • <span class="text-strong">Relay 4: </span> Pulse Output / Beacon
+              </td></tr>
+              <tr><td class="text-strong">Audible Alarm</td><td>Piezo buzzer (Active on fault/disconnect)</td></tr>
+              <tr><td class="text-strong">Visual Indicators</td><td>Status LED (Blinks on heartbeat); Override LED</td></tr>
+              <tr><td class="text-strong">Override Mode</td><td>Hardware button (Pin 23) forces RUN state for maintenance</td></tr>
+              <tr><td class="text-strong">Enclosure Recommendation</td><td>IP66 Polycarbonate (Not included standard)</td></tr>
+            </tbody>
+          </table>
+
+          
+          <div class="text-title-sm">TRANSMITTER (TX) SPECIFICATIONS</div>
+          <table class="spec-table text-body">
+            <tbody>
+              <tr><td class="text-strong">Input Power</td><td>9V Battery Pack</td></tr>
+              <tr><td class="text-strong">Actuation</td><td>Normally Open (NO) Emergency Stop Button</td></tr>
+              <tr><td class="text-strong">Feedback</td><td>Visual Status LED (Solid = Run, Flashing = Stop)</td></tr>
+              <tr><td class="text-strong">Form Factor</td><td>Handheld portable unit</td></tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- System Overview -->
+    <section class="section" id="mission">
       <div class="container">
-        <div class="text-title-lg">Core Capabilities</div>
-        <div class="card" id="e-stop-card">
-          <div class="text-title-sm">Core Capabilities</div>
-          <div class="text-body">Dedicated safety channel for reliable remote stop control across marine systems.</div>
-          <div class="text-body"><span class="text-strong">· Safety:</span> Fast, deterministic stop signaling with isolation from primary control buses.</div>
-          <div class="text-body"><span class="text-strong">· Integration:</span> Compatible with autonomy stacks and manual override workflows.</div>
-          <div class="text-body"><span class="text-strong">· Enclosure:</span> Marine-grade build suitable for harsh operational environments.</div>
-          <div class="text-body"><span class="text-strong">· Telemetry:</span> Works with the Fathom Robotics USV Companion Interface for visibility and logging.</div>
+        <div class="text-title-md">System Overview</div>
+        <div class="grid-3">
+
+          <div class="card">
+            <div class="text-title-sm">Ideal Applications</div>
+            <div class="text-body">
+              <p class="text-paragraph"><span class="text-strong">Mobile Robotics:</span> <br>Remote kill-switch for UGVs (Unmanned Ground Vehicles) and AMRs.</p>
+              <p class="text-paragraph"><span class="text-strong">Conveyor Systems:</span> <br>Maintenance safety for long manufacturing lines.</p>
+              <p class="text-paragraph"><span class="text-strong">Hazardous Testing:</span> <br>Remote shutdown for high-voltage or hydraulic test benches.</p>
+              <p class="text-paragraph"><span class="text-strong">Heavy Machinery:</span> <br>Wireless safety intervention for crane or hoist operators.</p>
+              <p class="text-paragraph"><span class="text-strong">⚠️ Safety Warning:</span> <br>This system is intended as a supplemental safety layer. Always implement redundant safety systems and comply with local ISO/IEC machine safety standards (e.g., ISO 13850) before deploying in critical industrial applications.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="text-title-sm">Features</div>
+            <div class="text-body">
+              <p class="text-paragraph">Emergency engine cutoff. (Main E-stop function) <span class="text-strong">Relay 1</span><br>
+                Remote E-stop bypass<br>
+                Receiver Buzzer<br>
+                Beacon indicator <span class="text-strong">Relay 4</span><br>
+                Transmitter Display<br>
+                Signal To Noise Ratio (SnR)<br>
+                Distance to vessel<br>
+                GPS Coordinates display<br>
+                Geofencing<br>
+                Remote Engine Start <span class="text-strong">Relay 2</span><br>
+                AUX function control <span class="text-strong">Relay 3</span><br>
+                Transmitter buzzer</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="text-title-sm">Accessories</div>
+            <div class="text-body">
+              <p class="text-paragraph">433Mhz transmitter antenna</p>
+              <p class="text-paragraph">433Mhz hi-gain receiver transmitter antenna</p>
+              <p class="text-paragraph">Receiver GSP antenna</p>
+              <p class="text-paragraph">Handheld unit 6.8 Ah battery pack</p>
+              <p class="text-paragraph">Handheld unit belt clip</p>
+            </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- Highlights -->
+    <section class="section" id="e-stop-highlights">
+      <div class="container">
+        <div class="text-title-lg">Key Highlights</div>
+          <div class="modes-grid">
+            <div class="text-body"><span class="text-strong">Fail-Safe Heartbeat Monitoring: </span> <br>The receiver continuously monitors the transmitter's signal. If the connection is lost for more than 1 second, an alarm triggers; if lost for 8 seconds, the system automatically engages the E-Stop to prevent unprotected operation.</div>
+            <div class="text-body"><span class="text-strong">Long-Range LoRa Communication:  </span><br> Utilizes 433MHz E32 LoRa radio modules for superior range and penetration compared to standard 2.4GHz Wi-Fi solutions.</div>
+            <div class="text-body"><span class="text-strong">Packet Integrity Check:  </span><br> To prevent false restarts, the system requires 20 consecutive valid "RUN" packets before releasing safety relays, ensuring a stable connection before machinery engages.</div>
+            <div class="text-body"><span class="text-strong">Bypass & Maintenance Mode: </span><br>Features a dedicated hardware override button on the receiver to allow controlled machine movement or maintenance without the transmitter, complete with visual and audible safety alerts.</div>
+          </div>
         </div>
       </div>
     </section>
