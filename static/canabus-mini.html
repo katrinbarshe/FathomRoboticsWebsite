@@ -16,33 +16,103 @@
       <div class="text-title-xl product-hero-title">CANaBUS<br>Mini</div>
     </div>
     <section class="section" id="canabus-mini">
-      <div class="container">
-        <div class="text-title-lg">Core Operating Modes</div>
-        <div class="card" id="canabus-mini-card">
-          <div class="text-title-sm">Core Operating Modes</div>
-          <div class="text-body"><span class="text-strong">Mode 1: Standalone CAN Transceiver &amp; Protocol Translator</span> Functions as an intelligent gateway, converting proprietary protocols into NMEA 2000 or JSON via Ethernet/Serial using proprietary .dbc files.</div>
-          <div class="text-body"><span class="text-strong">· Use Cases:</span> Retrofitting legacy control elements and electronics into modern remotely controlled or autonomous systems.</div>
-          <div class="text-body"><span class="text-strong">· Key Features:</span> DBC file-based parsing, configurable routing, &lt;10ms latency, and control system agnostic.</div>
-          <div class="text-body"><span class="text-strong">Mode 2: ROS/ROS2 Integration Node</span> Acts as a dedicated hardware node within ROS architectures to expose marine CAN devices as native ROS entities.</div>
-          <div class="text-body"><span class="text-strong">· Use Cases:</span> Academic autonomy research, multi-sensor fusion, and computer vision/LIDAR integration.</div>
-          <div class="text-body"><span class="text-strong">· Key Features:</span> Custom device-specific ROS2 nodes, bidirectional sensor/control data flow, and Nav2/MoveIt compatibility.</div>
-          <div class="text-body"><span class="text-strong">Mode 3: Autopilot Integration (ArduPilot/QGC)</span> Connects industrial CAN hardware to open-source platforms like ArduPilot and QGroundControl.</div>
-          <div class="text-body"><span class="text-strong">· Use Cases:</span> Utilizing proven autonomy algorithms, waypoint mission planning, and MAVLink telemetry integration.</div>
-          <div class="text-body"><span class="text-strong">· Key Features:</span> MAVLink bridge for CAN, custom ArduPilot drivers, and support for ArduRover/ArduBoat firmware.</div>
-          <div class="text-body"><span class="text-strong">Mode 4: Fathom Robotics USV Companion Interface (Recommended)</span> The most complete mode, pairing the device with the KiloWebInterface dashboard for unmanned vessel operations.</div>
-          <div class="text-body"><span class="text-strong">· Use Cases:</span> Professional commercial USV operations, remote shore-based piloting, and fleet management (coming soon).</div>
-          <div class="text-body"><span class="text-strong">· Key Features:</span> Zero-install web interface, real-time telemetry with custom widgets, &lt;100ms command latency, mission replay, and modular sensor fusion. Includes advanced payload release capabilities extending beyond the standard ArduPilot scope.</div>
-          <div class="text-body"><span class="text-strong">__________________________________________________________</span></div>
-          <div class="text-title-sm">CANaBUS Mini: Key Highlights</div>
-          <div class="text-body"><span class="text-strong">Multi-Protocol Marine Integration:</span> Interfaces with proprietary CAN protocols from major manufacturers like Volvo Penta, Yamaha, Mercury, Garmin, and Raymarine to eliminate vendor lock-in.</div>
-          <div class="text-body"><span class="text-strong">Triple Independent CAN Architecture:</span> Features three isolated CAN 2.0B interfaces for simultaneous, conflict-free connection to engine, steering, and navigation subsystems.</div>
-          <div class="text-body"><span class="text-strong">Industrial-Grade Build:</span> IP67-rated automotive enclosure with marine-grade connectors and conformal-coated PCBs for harsh saltwater protection.</div>
-          <div class="text-body"><span class="text-strong">Real-Time Processing:</span> Powered by a 600MHz ARM Cortex-M7 delivering &lt;5ms latency, essential for safe autonomous response.</div>
-          <div class="text-body"><span class="text-strong">Flexible Operating Modes:</span> Supports four modes ranging from simple protocol translation via DBC files to full ROS2 autonomy integration.</div>
-          <div class="text-body"><span class="text-strong">Remote Web Interface:</span> Native compatibility with the Fathom Robotics USV Companion Interface for real-time telemetry, diagnostics, and piloting from any browser.</div>
+      <div class="container two-col">
+        <div>
+          <div class="text-title-lg">Universal CANaBUS Controller for Unmanned Systems</div>
+          <div class="text-body">Can Controller for Industrial & Commercial USV Applications The CANaBUS Mini is a professional-grade autonomy controller designed to transform conventional crewed vessels into sophisticated Vehicles (USVs). By providing seamless integration with CAN bus systems over Ethernet. The CANaBUS Mini bridges the gap between legacy electronics and modern autonomous control stacks like ROS/ROS2, Ardupilot or Fathom Robotics USV Companion Interface.</div>
+          <div class="text-body">Housed in a rugged IP69K automotive-grade enclosure, this compact controller manages critical vehicle systems including engines (ECU), steering actuators, trim tabs, autopilots, through three independent CAN bus interfaces. Combined with dual UART serial ports and Ethernet connectivity, the CANaBUS Mini serves as command normalizer and interpreter system for unmanned operations.</div>
+          <div class="text-body">Built on the high-performance ARM Cortex-M7 microcontroller platform, the CANaBUS Mini delivers deterministic, real-time control with minimal latency — essential for sensor fusion and autonomous decision-making in dynamic environments. Whether deployed as a standalone CAN translator, integrated into ROS2 autonomy stacks, or paired with established autopilot systems, the CANaBUS Mini provides the reliable, industrial-strength foundation required for commercial uncrewed systems operations.</div>
+          <img class="product-image" src="images/IMG_7504.jpg" alt="CANaBUS Mini">
+        </div>
+
+        <div class="card">
+          <div class="text-title-sm">SPECIFICATIONS</div>
+          <table class="spec-table text-body">
+            <tbody>
+              <tr><td class="text-strong">Microcontroller</td><td>ARM Cortex-M7 @ 600MHz</td></tr>
+              <tr><td class="text-strong">Operating Voltage</td><td>12V DC nominal (9—16V input range)</td></tr>
+              <tr><td class="text-strong">Power Consumption</td><td>&lt;5W typical, &lt;8W maximum</td></tr>
+              <tr><td class="text-strong">Environmental Rating</td><td>IP69K (dust-tight, waterproof)</td></tr>
+              <tr><td class="text-strong">Operating t°</td><td>-40 to +85 °C</td></tr>
+              <tr><td class="text-strong">Dimensions / Weight</td><td>W 118.80 mm, L 114.00 mm, H 34.75 mm, 210 g</td></tr>
+              <tr><td class="text-strong">CAN Bus Channels</td><td>3x Independent CAN 2.0B (isolated)</td></tr>
+              <tr><td class="text-strong">CAN Bit Rates</td><td>Configurable: 125k, 250k, 500k, 1Mbps</td></tr>
+              <tr><td class="text-strong">CAN Termination</td><td>Switchable 120Ω on-board (per channel)</td></tr>
+              <tr><td class="text-strong">Ethernet</td><td>10/100 Mbps</td></tr>
+              <tr><td class="text-strong">Serial UART</td><td>2x RS-232/TTL configurable</td></tr>
+              <tr><td class="text-strong">Expansion</td><td>I2C, GPIO, SPI available via internal header</td></tr>
+              <tr><td class="text-strong">Supported Protocols</td><td>CAN 2.0B, NMEA 2000, J1939</td></tr>
+              <tr><td class="text-strong">Message Filtering</td><td>Hardware filters + software acceptance masks</td></tr>
+              <tr><td class="text-strong">Transmission Rate</td><td>Up to 16,000 frames/second (aggregate)</td></tr>
+              <tr><td class="text-strong">DBC File Support</td><td>Native parsing and message translation</td></tr>
+              <tr><td class="text-strong">Bus Monitoring</td><td>Real-time diagnostics, error detection, statistics</td></tr>
+              <tr><td class="text-strong">Propulsion &amp; control</td><td>Inquire for currently supported, propulsion and control systems</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
+
+    <section class="section" id="canabus-mini-highlights">
+      <div class="container">
+        <div class="text-title-lg">Key Highlights</div>
+          <div class="grid-3">
+            <div class="text-body"><span class="text-strong">Multi-Protocol Marine Integration:</span> Interfaces with proprietary CAN protocols from major manufacturers like Volvo Penta, Yamaha, Mercury, Garmin, and Raymarine.</div>
+            <div class="text-body"><span class="text-strong">Triple Independent CAN Architecture:</span> Features three isolated CAN 2.0B interfaces for simultaneous, conflict-free connection to engine, steering, and navigation subsystems.</div>
+            <div class="text-body"><span class="text-strong">Industrial-Grade Build:</span> IP69K-rated automotive enclosure with marine-grade connectors and conformal-coated PCBs for harsh saltwater protection.</div>
+            <div class="text-body"><span class="text-strong">Real-Time Processing:</span> Powered by a 600MHz ARM Cortex-M7 delivering &lt;5ms latency, essential for safe autonomous response.</div>
+            <div class="text-body"><span class="text-strong">Flexible Operating Modes:</span> Supports four modes ranging from simple protocol translation via DBC files to full ROS2 autonomy integration.</div>
+            <div class="text-body"><span class="text-strong">Remote Web Interface:</span> Native compatibility with the Fathom Robotics USV Companion Interface for real-time telemetry, diagnostics, and piloting from any browser.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="canabus-mini-modes">
+      <div class="container">
+        <div class="text-title-lg">Core Operating Modes</div>
+        <div class="modes-grid">
+          <div class="card">
+            <div class="text-body"><span class="text-strong">MODE 1:</span></div>
+            <div class="text-body"><span class="text-strong">Standalone CAN Transceiver &amp; Protocol Translator</span> Functions as an intelligent gateway, converting proprietary protocols into NMEA 2000 or JSON via Ethernet/Serial using proprietary .dbc files.</div>
+            <div class="text-body"><span class="text-strong">• Use Cases:</span> Retrofitting legacy control elements and electronics into modern remotely controlled or autonomous systems.</div>
+            <div class="text-body"><span class="text-strong">• Key Features:</span> DBC file-based parsing, configurable routing, &lt;5ms latency, and control system agnostic.</div>
+          </div>
+
+          <div class="card">
+            <div class="text-body"><span class="text-strong">MODE 2:</span></div>
+            <div class="text-body"><span class="text-strong">ROS/ROS2 Integration Node</span> Acts as a dedicated hardware node within ROS architectures to expose marine CAN devices as native ROS entities.</div>
+            <div class="text-body"><span class="text-strong">• Use Cases:</span> Academic autonomy research, multi-sensor fusion, and computer vision/LIDAR integration.</div>
+            <div class="text-body"><span class="text-strong">• Key Features:</span> Custom device-specific ROS2 nodes, bidirectional sensor/control data flow, and Nav2/MoveIt compatibility.</div>
+          </div>
+
+          <div class="card">
+            <div class="text-body"><span class="text-strong">MODE 3:</span></div>
+            <div class="text-body"><span class="text-strong">Autopilot Integration (ArduPilot/QGC)</span> Connects industrial CAN hardware to open-source platforms like ArduPilot and QGroundControl.</div>
+            <div class="text-body"><span class="text-strong">• Use Cases:</span> Utilizing proven autonomy algorithms, waypoint mission planning, and MAVLink telemetry integration.</div>
+            <div class="text-body"><span class="text-strong">• Key Features:</span> MAVLink bridge for CAN, custom ArduPilot drivers, and support for ArduRover/ArduBoat firmware.</div>
+          </div>
+
+          <div class="card">
+            <div class="text-body"><span class="text-strong">MODE 4:</span></div>
+            <div class="text-body"><span class="text-strong">Fathom Robotics USV Companion Interface (Recommended)</span> The most complete mode, pairing the device with the KiloWebInterface dashboard for unmanned vessel operations.</div>
+            <div class="text-body"><span class="text-strong">• Use Cases:</span> Professional commercial USV operations, remote shore-based piloting, and fleet management (coming soon).</div>
+            <div class="text-body"><span class="text-strong">• Key Features:</span> Zero-install web interface, real-time telemetry with custom widgets, &lt;100ms command latency, mission replay, and modular sensor fusion. Includes advanced payload release capabilities extending beyond the standard ArduPilot scope.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="canabus-mini-diagram">
+      <div class="container">
+        <div class="card">
+          <div class="text-title-lg">CAN system</div>
+          <img class="product-image" src="images/can-system.svg" alt="CAN system diagram">
+        </div>
+      </div>
+    </section>
+
   </main>
   
   <div id="product-picking"></div>
